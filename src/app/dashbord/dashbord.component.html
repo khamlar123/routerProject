@@ -1,2 +1,69 @@
-<p>dashbord works!</p>
-<router-outlet></router-outlet>
+<div class="sidebar">
+  <div class="logo-details">
+    <i class='bx bxl-c-plus-plus'></i>
+    <span class="logo_name" style="font-size: 18px;">ລະບົບການຈັດສາງ</span>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a href="javascript:void(0)" (click)="changeActiveMenu(1)" [ngClass]="{'active': menuActive === 1}" class="active">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">ຈັດການຂໍ້ມູນພື້ນຖານ</span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)" (click)="changeActiveMenu(2)"  [ngClass]="{'active': menuActive === 2}">
+        <i class='bx bx-list-ul'></i>
+        <span class="links_name">ຮັບອຸປະກອນ</span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)" (click)="changeActiveMenu(3)"  [ngClass]="{'active': menuActive === 3}">
+        <i class='bx bx-pie-chart-alt-2'></i>
+        <span class="links_name">ເບີກອຸປະກອນ</span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)" (click)="changeActiveMenu(4)"  [ngClass]="{'active': menuActive === 4}">
+        <i class='bx bx-coin-stack'></i>
+        <span class="links_name">ລາຍງານ</span>
+      </a>
+    </li>
+
+    <li class="log_out">
+      <a href="javascript:void(0)" (click)="logoutFunc()"  [ngClass]="{'active': menuActive === 5}">
+        <i class='bx bx-log-out'></i>
+        <span class="links_name">ອອກຈາກລະບົບ</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<section class="home-section">
+  <nav >
+    <div class="sidebar-button" style="z-index: -1;">
+      <i class='bx bx-menu sidebarBtn'></i>
+      <span class="dashboard">ລະບົບການຈັດສາງອຸປະກອນໂຄງການ-ເຕັກນິກ ລາວໂທລະຄົມ</span>
+    </div>
+  </nav>
+
+  <div class="home-content">
+
+    <div class="content-ins">
+      <router-outlet></router-outlet>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+

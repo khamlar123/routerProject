@@ -1,0 +1,51 @@
+
+
+<div class="modal-container">
+  <div class="content card">
+
+      <div class="close">
+        <span class="material-icons" (click)="coloseFunc()">
+          close
+        </span>
+      </div>
+
+      <div class="input-item">
+
+        <div class="item">
+            <label for="">ລະຫັດອຸປະກອນ</label>
+            <input type="text" [(ngModel)]="addModal.id" readonly>
+        </div>
+
+        <div class="item">
+          <label for="">ຊື່ອຸປະກອນ</label>
+          <input type="text" [(ngModel)]="addModal.unit_name">
+        </div>
+
+        <div class="item hasb">
+          <button (click)="addUnit()">ບັນທຶກ</button>
+        </div>
+
+      </div>
+
+      <div class="table-wrapper" style="margin-top: 1rem; height: calc(100vh - 300px); overflow: auto;">
+          <table>
+              <tr>
+                <th style="width: 50px;">ລະຫັດ</th>
+                <th>ຊື່ອຸປະກອນ</th>
+                <th >Action</th>
+              </tr>
+              <tr *ngFor="let item of unitList">
+                <td>{{item.id}}</td>
+                <td>{{item.unit_name}}</td>
+
+                <td  style="width: 150px;">
+                  <button (click)="deleteUnit(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
+                  <button (click)="editUnit(item.id)" style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
+                </td>
+              </tr>
+          </table>
+      </div>
+
+
+  </div>
+</div>

@@ -1,1 +1,91 @@
-<p>modal1 works!</p>
+
+
+<div class="modal-container">
+    <div class="content card">
+
+        <div class="close">
+          <span class="material-icons" (click)="coloseFunc()">
+            close
+          </span>
+        </div>
+
+        <div class="input-item">
+
+          <div class="item">
+              <label for="">ລະຫັດອຸປະກອນ</label>
+              <input type="text" [(ngModel)]="addModal.id" readonly>
+          </div>
+
+          <div class="item">
+            <label for="">ຊື່ອຸປະກອນ</label>
+            <input type="text" [(ngModel)]="addModal.equip_name">
+          </div>
+
+          <div class="item">
+            <label for="">ຕຳແໜ່ງອຸປະກອນ</label>
+            <select [(ngModel)]="addModal.pos_name">
+              <option  [value]="'inv1'">ສາງ1</option>
+              <option  [value]="'inv2'">ສາງ2</option>
+              <option  [value]="'inv3'">ສາງ3</option>
+            </select>
+          </div>
+
+
+          <div class="item">
+            <label for="">ປະເພດອຸປະກອນ</label>
+
+            <select [(ngModel)]="addModal.cate_id">
+              <option *ngFor="let item of allCate" [value]="item.id">{{item.cate_name}}</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <label for="">ຫົວໜ່ວຍອຸປະກອນ</label>
+
+            <select [(ngModel)]="addModal.unit_id">
+              <option *ngFor="let item of allUnit" [value]="item.id">{{item.unit_name}}</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <label for="">ຈໍານວນ</label>
+            <input type="number" [(ngModel)]="addModal.equip_stock">
+          </div>
+
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item hasb">
+            <button (click)="addEqu()">ບັນທຶກ</button>
+          </div>
+
+        </div>
+
+        <div class="table-wrapper" style="margin-top: 1rem; height: calc(100vh - 300px); overflow: auto;">
+            <table>
+                <tr>
+                  <th style="width: 50px;">ລະຫັດ</th>
+                  <th>ຊື່ອຸປະກອນ</th>
+                  <th>ຕໍາແໜ່ງອຸປະກອນ</th>
+                  <th>ປະເພດອຸປະກອນ</th>
+                  <th>ຫົວໜ່ວຍອຸປະກອນ</th>
+                  <th>ຈໍານວນ</th>
+                  <th >Action</th>
+                </tr>
+                <tr *ngFor="let item of equList">
+                  <td>{{item.id}}</td>
+                  <td>{{item.equip_name}}</td>
+                  <td>{{item.equip_import}}</td>
+                  <td>{{item.cate_name}}</td>
+                  <td>{{item.unit_name}}</td>
+                  <td>{{item.equip_stock}}</td>
+                  <td  style="width: 150px;">
+                    <button (click)="deleteEqu(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
+                    <button (click)="editEqu(item.id)" style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
+                  </td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+</div>

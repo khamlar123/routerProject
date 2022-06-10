@@ -1,2 +1,59 @@
-<p>menu1 works!</p>
-<app-modal1></app-modal1>
+<div class="overview-boxes">
+  <div class="box card" (click)="activeMenu = 1">
+    <div class="right-side">
+      <div class="box-topic">ຈັດການຂໍ້ມູນອຸປະກອນ</div>
+    </div>
+    <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
+  </div>
+  <div class="box card" (click)="activeMenu = 2">
+    <div class="right-side">
+      <div class="box-topic">ຈັດການປະເພດອຸປະກອນ</div>
+    </div>
+    <i class='bx bx-cart cart three' style="margin-top: 10px;"></i>
+  </div>
+  <div class="box card" (click)="activeMenu = 3">
+    <div class="right-side">
+      <div class="box-topic">ຈັດການຫົວໜ່ວຍອຸປະກອນ</div>
+    </div>
+    <i class='bx bxs-cart-download cart four' style="margin-top: 10px;"></i>
+  </div>
+
+  <div class="box card" (click)="activeMenu = 4">
+    <div class="right-side">
+      <div class="box-topic">ຈັດກາຂໍ້ມູນຕໍາແໜ່ງອຸປະກອນ</div>
+    </div>
+    <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
+  </div>
+
+  <div class="box card" (click)="activeMenu = 5">
+    <div class="right-side">
+      <div class="box-topic">ຈັດການຂໍ້ມູນພະນັກງານ</div>
+    </div>
+    <i class='bx bx-cart-alt cart' style="margin-top: 10px;"></i>
+  </div>
+
+  <div class="box card" (click)="activeMenu = 6">
+    <div class="right-side">
+      <div class="box-topic">ຈັດກາຂໍ້ມູນຜູ້ສະໜອງ</div>
+    </div>
+    <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
+  </div>
+
+  <div class="box card" (click)="activeMenu = 7">
+    <div class="right-side">
+      <div class="box-topic">ຈັດກາຂໍ້ມູນໃບສັ່ງຊື້ອຸປະກອນ</div>
+    </div>
+    <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
+  </div>
+
+  <div class="box card" (click)="activeMenu = 8">
+    <div class="right-side">
+      <div class="box-topic">ຈັດກາຂໍ້ມູນຜູ້ເຂົ້າໃຊລະບົບ</div>
+    </div>
+    <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
+  </div>
+
+</div>
+
+<app-modal1 *ngIf="activeMenu === 1" (close)="activeMenu = 0"></app-modal1>
+<app-modal2 *ngIf="activeMenu === 2" (close)="activeMenu = 0"></app-modal2>

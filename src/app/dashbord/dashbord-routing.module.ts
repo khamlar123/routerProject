@@ -14,6 +14,20 @@ export const DashbordRoutingModule: Routes = [
   },
 
   {
+    path: 'menu3',
+    loadChildren: () =>
+      import('./component/menu3/menu3.module').then((m) => m.Menu3Module),
+  },
+
+  {
+    path: 'menu4',
+    loadChildren: () =>
+      import('./component/menu4/menu4.module').then((m) => m.Menu4Module),
+  },
+
+
+
+  {
     path: '**',
     redirectTo: '404',
     pathMatch: 'full',
