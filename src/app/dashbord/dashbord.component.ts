@@ -10,10 +10,13 @@ export class DashbordComponent implements OnInit {
   menuActive = 0;
   constructor(
     private router : Router,
-    private route: ActivatedRoute,
     ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(localStorage.getItem('token') === null ){
+        this.router.navigate(['/login'])
+    }
+  }
 
   changeActiveMenu(id:number):void{
       this.menuActive = id;

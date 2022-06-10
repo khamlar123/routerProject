@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,6 +17,10 @@ const routes: Routes = [
            (m) => m.DashbordModule),
       }
     ]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

@@ -1,5 +1,6 @@
 
 import { Routes } from '@angular/router';
+import { CartGuard } from './dashboard';
 export const DashbordRoutingModule: Routes = [
   {
     path: 'menu1',

@@ -1,0 +1,25 @@
+<div class="screen-1 form"   >
+
+  <div class="logo">
+    <img src="../../assets/11.ico" alt="img">
+  </div>
+
+
+    <div class="email">
+      <label for="email">User name</label>
+      <div class="sec-2">
+
+        <input type="text" name="user" placeholder="User name" [(ngModel)]="loginModal.user_name" />
+      </div>
+    </div>
+    <div class="password">
+      <label for="password">Password</label>
+      <div class="sec-2">
+
+        <input class="pas" type="password" name="password" placeholder="············" [(ngModel)]="loginModal.password"/>
+
+      </div>
+    </div>
+    <button class="login" (click)="loginFunc()">Login</button>
+
+  </div>
