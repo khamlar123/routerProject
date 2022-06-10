@@ -7,7 +7,6 @@ export const DashbordRoutingModule: Routes = [
       import('./component/menu1/menu1.module').then((m) => m.Menu1Module),
   },
 
-
   {
     path: 'menu2',
     loadChildren: () =>
