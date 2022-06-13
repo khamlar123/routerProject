@@ -1,0 +1,67 @@
+
+
+<div class="modal-container">
+  <div class="content card">
+
+      <div class="close">
+        <span class="material-icons" (click)="coloseFunc()">
+          close
+        </span>
+      </div>
+
+      <!-- <div class="input-item">
+
+        <div class="item">
+          <label for="">ພະນັກງານ</label>
+
+          <select [(ngModel)]="addModel.staff_id">
+            <option *ngFor="let item of staffList" [ngValue]="item.id">{{item.fname}}</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <label for="">ຊື່ຜູ້ໃຊ້</label>
+          <input type="text" [(ngModel)]="addModel.user_name" >
+        </div>
+
+        <div class="item">
+          <label for="">ລະຫັດຜ່ານ</label>
+          <input type="password" [(ngModel)]="addModel.password" >
+        </div>
+
+        <div class="item"></div>
+        <div class="item"></div>
+
+
+    <div class="item hasb">
+      <button (click)="addUser()">ບັນທຶກ</button>
+    </div>
+
+      </div>
+
+      <div class="table-wrapper" style="margin-top: 1rem; height: calc(100vh - 200px); overflow: auto;">
+          <table>
+              <tr>
+                <th style="width: 50px;">ລະຫັດ</th>
+                <th>ຊື່ຜູ້ໃຊ້</th>
+                <th>ຊື່ພະນັກງານ</th>
+                <th>ລະຫັດຜ່ານ</th>
+                <th >Action</th>
+              </tr>
+              <tr *ngFor="let item of userList">
+                <td>{{item.id}}</td>
+                <td>{{item.user_name }}</td>
+                <td>{{getStaffName(item.staff_id)}}</td>
+                <td>{{item.password}}</td>
+
+                <td  style="width: 150px;">
+                  <button (click)="dateUser(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
+                  <button (click)="userDetail(item.id)" style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
+                </td>
+              </tr>
+          </table>
+      </div> -->
+
+
+  </div>
+</div>

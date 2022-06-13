@@ -1,0 +1,63 @@
+.overview-boxes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  gap: 1rem;
+  .box{
+    cursor: pointer;
+  }
+}
+
+.modal-container{
+  .content{
+    width: 55vw;
+    height: 90vh;
+    .close{
+      display: flex;
+      width: 100%;
+      flex-direction: row-reverse;
+      span{
+        color: red;
+        cursor: pointer;
+      }
+
+    }
+
+    .input-item{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      .item{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        label{
+          color: #666666;
+        }
+        input, select{
+          height: 35px;
+          border-radius: 5px;
+          border: 1px solid gainsboro;
+          outline: none;
+          padding: 0 5px;
+        }
+
+        button{
+          width: 100px;
+          height: 30px;
+          border: none;
+          background: rgb(17, 199, 17);
+          color: white;
+        }
+      }
+
+      .hasb{
+        display: flex;
+
+        justify-content: end;
+      }
+    }
+
+
+  }
+}

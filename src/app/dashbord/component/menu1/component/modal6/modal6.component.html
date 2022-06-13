@@ -1,0 +1,96 @@
+
+
+<div class="modal-container">
+  <div class="content card">
+
+      <div class="close">
+        <span class="material-icons" (click)="coloseFunc()">
+          close
+        </span>
+      </div>
+
+      <div class="input-item">
+
+        <div class="item">
+          <label for="">ຊື່ບໍລິສັດ</label>
+          <input type="text" [(ngModel)]="addModel.conmpany_name" >
+        </div>
+
+        <div class="item">
+          <label for="">ຊື່ຜູ້ສະໜອງ</label>
+          <input type="text" [(ngModel)]="addModel.sup_name" >
+      </div>
+
+
+      <div class="item">
+        <label for="">ບ້ານ</label>
+        <input type="text" [(ngModel)]="addModel.village" >
+      </div>
+
+        <div class="item">
+          <label for="">ເມືອງ</label>
+          <input type="text" [(ngModel)]="addModel.district" >
+      </div>
+
+      <div class="item">
+        <label for="">ແຂວງ</label>
+        <input type="text" [(ngModel)]="addModel.province" >
+      </div>
+
+      <div class="item">
+        <label for="">ເບີໂທ</label>
+        <input type="text" [(ngModel)]="addModel.phone" >
+    </div>
+
+    <div class="item">
+      <label for="">ຂໍ້ມູນຕິດຕໍ່</label>
+      <input type="text" [(ngModel)]="addModel.contact_info" >
+    </div>
+
+    <div class="item">
+      <label for="">ອີເມສ</label>
+      <input type="text" [(ngModel)]="addModel.email" >
+    </div>
+
+
+    <div class="item hasb">
+      <button (click)="addSub()">ບັນທຶກ</button>
+    </div>
+
+      </div>
+
+      <div class="table-wrapper" style="margin-top: 1rem; height: calc(100vh - 200px); overflow: auto;">
+          <table>
+              <tr>
+                <th style="width: 50px;">ລະຫັດ</th>
+                <th>ຊື່ບໍລິສັດ</th>
+                <th>ຊື່ຜູ້ສະໜອງ</th>
+                <th>ບ້ານ</th>
+                <th>ເມືອງ</th>
+                <th>ແຂວງ</th>
+                <th>ເບີໂທ</th>
+                <th>ຂໍ້ມູນຕິດຕໍ່</th>
+                <th>ອີເມສ</th>
+                <th >Action</th>
+              </tr>
+              <tr *ngFor="let item of supList">
+                <td>{{item.id}}</td>
+                <td>{{item.conmpany_name }}</td>
+                <td>{{item.sup_name}}</td>
+                <td>{{item.village}}</td>
+                <td>{{item.district}}</td>
+                <td>{{item.province}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.contact_info}}</td>
+                <td>{{item.email}}</td>
+                <td  style="width: 150px;">
+                  <button (click)="deleteSup(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
+                  <button (click)="supDetail(item.id)" style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
+                </td>
+              </tr>
+          </table>
+      </div>
+
+
+  </div>
+</div>

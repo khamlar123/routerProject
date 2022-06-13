@@ -1,0 +1,109 @@
+
+
+<div class="modal-container">
+  <div class="content card">
+
+      <div class="close">
+        <span class="material-icons" (click)="coloseFunc()">
+          close
+        </span>
+      </div>
+
+      <div class="input-item">
+
+
+
+        <div class="item">
+          <label for="">ຊື່</label>
+          <input type="text" [(ngModel)]="addModel.fname" >
+        </div>
+
+        <div class="item">
+          <label for="">ນາມສະກຸນ</label>
+          <input type="text" [(ngModel)]="addModel.lname" >
+      </div>
+
+      <div class="item">
+        <label for="">ເພດ</label>
+        <!-- <input type="text" [(ngModel)]="addModel.gender" > -->
+        <select [(ngModel)]="addModel.gender">
+          <option [value]="'Male'">Male</option>
+          <option [value]="'Female'">Female</option>
+          <option [value]="'Other'">Other</option>
+        </select>
+      </div>
+
+      <div class="item">
+        <label for="">ວັນເດືອນປີເກີດ</label>
+        <input type="date" [(ngModel)]="addModel.bod" >
+      </div>
+
+      <div class="item">
+        <label for="">ບ້ານ</label>
+        <input type="text" [(ngModel)]="addModel.village" >
+      </div>
+
+        <div class="item">
+          <label for="">ເມືອງ</label>
+          <input type="text" [(ngModel)]="addModel.district" >
+      </div>
+
+      <div class="item">
+        <label for="">ແຂວງ</label>
+        <input type="text" [(ngModel)]="addModel.province" >
+      </div>
+
+      <div class="item">
+        <label for="">ເບີໂທ</label>
+        <input type="text" [(ngModel)]="addModel.phone" >
+    </div>
+
+    <div class="item">
+      <label for="">ຂໍ້ມູນຕິດຕໍ່</label>
+      <input type="text" [(ngModel)]="addModel.contact_info" >
+    </div>
+
+    <div class="item"></div>
+    <div class="item"></div>
+
+    <div class="item hasb">
+      <button (click)="addStaff()">ບັນທຶກ</button>
+    </div>
+
+      </div>
+
+      <div class="table-wrapper" style="margin-top: 1rem; height: calc(100vh - 200px); overflow: auto;">
+          <table>
+              <tr>
+                <th style="width: 50px;">ລະຫັດ</th>
+                <th>ຊື່ນາມສະກຸນ</th>
+
+                <th>ເພດ</th>
+                <th>ບ້ານ</th>
+                <th>ເມືອງ</th>
+                <th>ແຂວງ</th>
+                <th>ເບີໂທ</th>
+                <th>ຂໍ້ມູນຕິດຕໍ່</th>
+                <th >Action</th>
+              </tr>
+              <tr *ngFor="let item of staffList">
+                <td>{{item.id}}</td>
+                <td>{{item.fname +' '+ item.lname }}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.bod | date: "shortDate"}}</td>
+                <td>{{item.village}}</td>
+                <td>{{item.district}}</td>
+                <td>{{item.province}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.contact_info}}</td>
+                <td  style="width: 150px;">
+                  <button (click)="deleteStaff(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
+                  <button (click)="staffDetail(item.id)" style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
+                </td>
+              </tr>
+          </table>
+      </div>
+
+
+  </div>
+</div>
