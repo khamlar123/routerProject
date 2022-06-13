@@ -123,5 +123,20 @@ export class DashboardService {
     return this.http.put<any>(this.url + 'user/edit-user', model).pipe(take(1));
   }
 
+  getPur():Observable<any>{
+    return this.http.get<any>(this.url + 'purchases/get-purchases').pipe(take(1));
+  }
+
+  addPur(model: any):Observable<any>{
+    return this.http.post<any>(this.url + 'purchases/add-purchases', model).pipe(take(1));
+  }
+
+  deletePur(id: number):Observable<any>{
+    return this.http.delete<any>(this.url + 'purchases/'+id.toString()).pipe(take(1));
+  }
+
+  updatePur(model: any):Observable<any>{
+    return this.http.put<any>(this.url + 'purchases/edit-purchases', model).pipe(take(1));
+  }
 
 }

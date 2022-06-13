@@ -9,32 +9,32 @@
         </span>
       </div>
 
-      <!-- <div class="input-item">
+      <div class="input-item">
 
         <div class="item">
-          <label for="">ພະນັກງານ</label>
-
-          <select [(ngModel)]="addModel.staff_id">
-            <option *ngFor="let item of staffList" [ngValue]="item.id">{{item.fname}}</option>
+          <label for="">ອຸປະກອນ</label>
+          <select [(ngModel)]="addModel.equip_id">
+            <option *ngFor="let item of equList" [ngValue]="item.id">{{item.equip_name}}</option>
           </select>
         </div>
 
         <div class="item">
-          <label for="">ຊື່ຜູ້ໃຊ້</label>
-          <input type="text" [(ngModel)]="addModel.user_name" >
+          <label for="">ວັນທີສັ່ງຊື້</label>
+          <input type="date" [(ngModel)]="addModel.pur_date" >
         </div>
 
         <div class="item">
-          <label for="">ລະຫັດຜ່ານ</label>
-          <input type="password" [(ngModel)]="addModel.password" >
+          <label for="">ຈໍານວນ</label>
+          <input type="number" [(ngModel)]="addModel.equip_qty" >
         </div>
+
 
         <div class="item"></div>
         <div class="item"></div>
 
 
     <div class="item hasb">
-      <button (click)="addUser()">ບັນທຶກ</button>
+      <button (click)="addPur()">ບັນທຶກ</button>
     </div>
 
       </div>
@@ -43,24 +43,23 @@
           <table>
               <tr>
                 <th style="width: 50px;">ລະຫັດ</th>
-                <th>ຊື່ຜູ້ໃຊ້</th>
-                <th>ຊື່ພະນັກງານ</th>
-                <th>ລະຫັດຜ່ານ</th>
+                <th>ອຸປະກອນ</th>
+                <th>ວັນທີສັ່ງຊື້</th>
+                <th>ຈໍານວນ</th>
                 <th >Action</th>
               </tr>
-              <tr *ngFor="let item of userList">
+              <tr *ngFor="let item of purList">
                 <td>{{item.id}}</td>
-                <td>{{item.user_name }}</td>
-                <td>{{getStaffName(item.staff_id)}}</td>
-                <td>{{item.password}}</td>
-
+                <td>{{getEquname(item.equip_id) }}</td>
+                <td>{{item.pur_date | date: "shortDate"}}</td>
+                <td>{{item.equip_qty}}</td>
                 <td  style="width: 150px;">
-                  <button (click)="dateUser(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
-                  <button (click)="userDetail(item.id)" style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
+                  <button (click)="deletePur(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
+                  <button (click)="purDetail(item.id)" style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
                 </td>
               </tr>
           </table>
-      </div> -->
+      </div>
 
 
   </div>
