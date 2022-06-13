@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu2.component.scss']
 })
 export class Menu2Component implements OnInit {
-
+  activeMenu = 0;
   constructor(    private router : Router,) { }
 
   ngOnInit(): void {

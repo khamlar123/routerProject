@@ -1,0 +1,82 @@
+
+
+<div class="modal-container">
+  <div class="content card">
+
+      <div class="close">
+        <span class="material-icons" (click)="coloseFunc()">
+          close
+        </span>
+      </div>
+
+      <div class="input-item">
+
+        <div class="item">
+            <label for="">ລະຫັດການສັ່ງຊື້</label>
+            <select [(ngModel)]="addModal.pur_id">
+              <option *ngFor="let item of purList" [value]="item.id">{{item.id}}</option>
+            </select>
+        </div>
+
+        <div class="item">
+          <label for="">ອຸປະກອນ</label>
+          <select [(ngModel)]="addModal.equip_id">
+            <option *ngFor="let item of equList" [value]="item.id">{{item.equip_name}}</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <label for="">ຜູ້ໃຊ້ລະບົບ</label>
+          <select [(ngModel)]="addModal.user_id">
+            <option *ngFor="let item of userList" [value]="item.id">{{item.user_name}}</option>
+          </select>
+        </div>
+
+
+        <div class="item">
+          <label for="">ວັນທີນໍາເຂົ້າ</label>
+          <input type="date" [(ngModel)]="addModal.import_date">
+        </div>
+
+
+        <div class="item">
+          <label for="">ຈໍານວນ</label>
+          <input type="number" [(ngModel)]="addModal.equip_qty">
+        </div>
+
+        <div class="item hasb">
+          <button (click)="addImp()">ບັນທຶກ</button>
+        </div>
+
+      </div>
+
+      <div class="table-wrapper" style="margin-top: 1rem; height: calc(100vh - 300px); overflow: auto;">
+          <table>
+              <tr>
+                <th style="width: 50px;">ລະຫັດ</th>
+                <th>ລະຫັດການສັ່ງຊື້</th>
+                <th>ອຸປະກອນ</th>
+                <th>ຜູ້ໃຊ້ລະບົບ</th>
+                <th>ວັນທີນໍາເຂົ້າ</th>
+                <th>ຈໍານວນ</th>
+                <th >Action</th>
+              </tr>
+              <tr *ngFor="let item of impList">
+                <td>{{item.id}}</td>
+                <td>{{item.pur_id}}</td>
+                <td>{{getEquName(item.equip_id)}}</td>
+                <td>{{getUserName(item.user_id)}}</td>
+                <td>{{item.import_date | date: "shortDate"}}</td>
+                <td>{{item.equip_qty}}</td>
+
+                <td  style="width: 150px;">
+                  <button (click)="deleteImp(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
+                  <button (click)="impDetail(item.id)"  style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
+                </td>
+              </tr>
+          </table>
+      </div>
+
+
+  </div>
+</div>

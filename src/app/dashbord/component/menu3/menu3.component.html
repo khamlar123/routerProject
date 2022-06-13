@@ -1,1 +1,12 @@
-<p>menu3 works!</p>
+<div class="overview-boxes">
+  <div class="box card" (click)="activeMenu = 1">
+    <div class="right-side">
+      <div class="box-topic">ເບີກອຸປະກອນ</div>
+    </div>
+    <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
+  </div>
+
+
+</div>
+
+<app-modal1 *ngIf="activeMenu === 1" (close)="activeMenu = 0"></app-modal1>

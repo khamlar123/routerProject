@@ -139,4 +139,19 @@ export class DashboardService {
     return this.http.put<any>(this.url + 'purchases/edit-purchases', model).pipe(take(1));
   }
 
+  getImport():Observable<any>{
+    return this.http.get<any>(this.url + 'imports/get-imports').pipe(take(1));
+  }
+
+  addImport(model: any):Observable<any>{
+    return this.http.post<any>(this.url + 'imports/add-imports', model).pipe(take(1));
+  }
+
+  deleteImport(id: number):Observable<any>{
+    return this.http.delete<any>(this.url + 'imports/'+id.toString()).pipe(take(1));
+  }
+
+  updateImport(model: any):Observable<any>{
+    return this.http.put<any>(this.url + 'imports/edit-imports', model).pipe(take(1));
+  }
 }
