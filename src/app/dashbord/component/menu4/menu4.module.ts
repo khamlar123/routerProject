@@ -3,11 +3,25 @@ import { CommonModule } from '@angular/common';
 
 import { Menu4RoutingModule } from './menu4-routing.module';
 import { Menu4Component } from './menu4.component';
+import { Modal1Component } from './component/modal1/modal1.component';
+import { Modal2Component } from './component/modal2/modal2.component';
+import { Modal3Component } from './component/modal3/modal3.component';
+import { Modal4Component } from './component/modal4/modal4.component';
+import { Modal5Component } from './component/modal5/modal5.component';
+import { Modal6Component } from './component/modal6/modal6.component';
+import { Modal7Component } from './component/modal7/modal7.component';
 
 
 @NgModule({
   declarations: [
-    Menu4Component
+    Menu4Component,
+    Modal1Component,
+    Modal2Component,
+    Modal3Component,
+    Modal4Component,
+    Modal5Component,
+    Modal6Component,
+    Modal7Component
   ],
   imports: [
     CommonModule,

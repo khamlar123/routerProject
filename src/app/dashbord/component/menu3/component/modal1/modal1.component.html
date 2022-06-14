@@ -1,1 +1,76 @@
-<p>modal1 works!</p>
+
+
+<div class="modal-container">
+  <div class="content card">
+
+      <div class="close">
+        <span class="material-icons" (click)="coloseFunc()">
+          close
+        </span>
+      </div>
+
+      <div class="input-item">
+
+        <div class="item">
+            <label for="">ພະນັກງານ</label>
+            <select [(ngModel)]="addModal.staff_id">
+              <option *ngFor="let item of staffList" [value]="item.id">{{item.fname}}</option>
+            </select>
+        </div>
+
+        <div class="item">
+          <label for="">ອຸປະກອນ</label>
+          <select [(ngModel)]="addModal.equip_id">
+            <option *ngFor="let item of equList" [value]="item.id">{{item.equip_name}}</option>
+          </select>
+      </div>
+
+        <div class="item">
+          <label for="">ວັນທີເບີກ</label>
+          <input type="date" [(ngModel)]="addModal.out_date">
+        </div>
+
+        <div class="item">
+          <label for="">ຈໍານວນ</label>
+          <input type="number" [(ngModel)]="addModal.out_qty">
+        </div>
+
+
+
+
+
+        <div class="item"></div>
+        <div class="item hasb">
+          <button (click)="addOut()">ບັນທຶກ</button>
+        </div>
+
+      </div>
+
+      <div class="table-wrapper" style="margin-top: 1rem; height: calc(100vh - 300px); overflow: auto;">
+          <table>
+              <tr>
+                <th style="width: 50px;">ລະຫັດ</th>
+                <th>ພະນັກງານ</th>
+                <th>ອຸປະກອນ</th>
+                <th>ວັນທີເບີກ</th>
+                <th>ຈໍານວນ</th>
+                <th >Action</th>
+              </tr>
+              <tr *ngFor="let item of outList">
+                <td>{{item.id}}</td>
+                <td>{{getStaffName(item.staff_id)}}</td>
+                <td>{{getEquName(item.equip_id)}}</td>
+                <td>{{item.out_date}}</td>
+                <td>{{item.out_qty}}</td>
+
+                <td  style="width: 150px;">
+                  <button (click)="deleteOut(item.id)" style="height: 30px; margin-right: 10px; background: red; width: 60px;border: none;">ລົບ</button>
+                  <button (click)="detail(item.id)" style="height: 30px; background: blue; width: 60px; border: none;">ແກ້ໄຂ</button>
+                </td>
+              </tr>
+          </table>
+      </div>
+
+
+  </div>
+</div>

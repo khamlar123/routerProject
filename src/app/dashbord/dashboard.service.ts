@@ -154,4 +154,21 @@ export class DashboardService {
   updateImport(model: any):Observable<any>{
     return this.http.put<any>(this.url + 'imports/edit-imports', model).pipe(take(1));
   }
+
+  getOut():Observable<any>{
+    return this.http.get<any>(this.url + 'outequipments/get-outequipments').pipe(take(1));
+  }
+
+  addOut(model: any):Observable<any>{
+    return this.http.post<any>(this.url + 'outequipments/add-outequipments', model).pipe(take(1));
+  }
+
+  deleteOut(id: number):Observable<any>{
+    return this.http.delete<any>(this.url + 'outequipments/'+id.toString()).pipe(take(1));
+  }
+
+  updateOut(model: any):Observable<any>{
+    return this.http.put<any>(this.url + 'outequipments/edit-outequipments', model).pipe(take(1));
+  }
+
 }

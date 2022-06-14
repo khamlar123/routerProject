@@ -62,7 +62,15 @@ export class Modal1Component implements OnInit, OnDestroy {
 
   loadEqu():void{
     this.subs.sink = this.api.getEquipments().subscribe(res => {
-      this.equList = res;
+      let arrayList: any[] =[];
+      arrayList = res;
+      arrayList.forEach(itx => {
+
+        const checkItem = this.equList.find(f =>f.id == itx.id);
+        if(!checkItem){
+          this.equList.push(itx);
+        }
+      });
     })
   }
 
