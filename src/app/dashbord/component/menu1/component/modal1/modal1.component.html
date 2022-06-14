@@ -24,9 +24,9 @@
           <div class="item">
             <label for="">ຕຳແໜ່ງອຸປະກອນ</label>
             <select [(ngModel)]="addModal.pos_name">
-              <option  [value]="'inv1'">ສາງ1</option>
-              <option  [value]="'inv2'">ສາງ2</option>
-              <option  [value]="'inv3'">ສາງ3</option>
+              <option  [value]="'ສາງ1'">ສາງ1</option>
+              <option  [value]="'ສາງ2'">ສາງ2</option>
+              <option  [value]="'ສາງ3'">ສາງ3</option>
             </select>
           </div>
 
@@ -74,7 +74,7 @@
                 <tr *ngFor="let item of equList">
                   <td>{{item.id}}</td>
                   <td>{{item.equip_name}}</td>
-                  <td>{{item.equip_import}}</td>
+                  <td>{{item.pos_name}}</td>
                   <td>{{item.cate_name}}</td>
                   <td>{{item.unit_name}}</td>
                   <td>{{item.equip_stock}}</td>

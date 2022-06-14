@@ -1,1 +1,54 @@
-<p>modal6 works!</p>
+<div class="report-wrapper card">
+  <div class="header">
+      <div class="option">
+
+            <div class="search">
+                <input type="search" [(ngModel)]="kw" (keyup.enter)="searchFunc()">
+                <button (click)="searchFunc()">ຄົນຫາ</button>
+            </div>
+
+            <div class="close">
+              <span class="material-icons" (click)="coloseFunc()">
+                close
+              </span>
+            </div>
+      </div>
+  </div>
+
+  <div class="content">
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th style="width: 50px;">ລະຫັດ</th>
+            <th>ຊື່ນາມສະກຸນ</th>
+
+            <th>ເພດ</th>
+            <th>ບ້ານ</th>
+            <th>ເມືອງ</th>
+            <th>ແຂວງ</th>
+            <th>ເບີໂທ</th>
+            <th>ຂໍ້ມູນຕິດຕໍ່</th>
+
+          </tr>
+          <tr *ngFor="let item of staffList">
+            <td>{{item.id}}</td>
+            <td>{{item.fname +' '+ item.lname }}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.bod | date: "shortDate"}}</td>
+            <td>{{item.village}}</td>
+            <td>{{item.district}}</td>
+            <td>{{item.province}}</td>
+            <td>{{item.phone}}</td>
+            <td>{{item.contact_info}}</td>
+
+          </tr>
+
+
+        </table>
+
+        <div class="btn-print">
+            <button onclick="window.print()">ພີນ</button>
+        </div>
+      </div>
+  </div>
+</div>

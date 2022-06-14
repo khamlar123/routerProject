@@ -1,28 +1,28 @@
 
-<div class="overview-boxes">
+<div class="overview-boxes" *ngIf="activeMenu === 0">
 
   <div class="box card" (click)="activeMenu = 1">
-    <div class="right-side">
-      <div class="box-topic">ລາບງານຂໍ້ມູນອຸປະກອນ</div>
-    </div>
-    <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
-  </div>
-
-  <div class="box card" (click)="activeMenu = 2">
     <div class="right-side">
       <div class="box-topic">ລາຍງານຂໍ້ມູນອຸປະກອນ</div>
     </div>
     <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
   </div>
 
-  <div class="box card" (click)="activeMenu = 3">
+  <div class="box card" (click)="activeMenu = 2">
     <div class="right-side">
-      <div class="box-topic">ລາຍງານຂໍ້ມູນນໍາອຸປະກອນ</div>
+      <div class="box-topic">ລາຍງານປະເພດອຸປະກອນ</div>
     </div>
     <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
   </div>
 
-  <div class="box card" (click)="activeMenu = 4">
+  <div class="box card" (click)="activeMenu = 3">
+    <div class="right-side">
+      <div class="box-topic">ລາຍງານຮັບອຸປະກອນ</div>
+    </div>
+    <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
+  </div>
+
+  <div class="box card" (click)="activeMenu = 7">
     <div class="right-side">
       <div class="box-topic">ລາຍງານຂໍ້ມູນເບີກອຸປະກອນ</div>
     </div>
@@ -31,7 +31,7 @@
 
   <div class="box card" (click)="activeMenu = 5">
     <div class="right-side">
-      <div class="box-topic">ລາບງານຂໍ້ມູນຜູ້ສະໜອງ</div>
+      <div class="box-topic">ລາຍງານຂໍ້ມູນຜູ້ສະໜອງ</div>
     </div>
     <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
   </div>
@@ -43,13 +43,12 @@
     <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
   </div>
 
-  <div class="box card" (click)="activeMenu = 7">
+  <div class="box card" (click)="activeMenu = 4">
     <div class="right-side">
       <div class="box-topic">ໃບສັ່ງຊື່ອຸປະກອນ</div>
     </div>
     <i class='bx bxs-cart-add cart two' style="margin-top: 10px;"></i>
   </div>
-
 
 </div>
 

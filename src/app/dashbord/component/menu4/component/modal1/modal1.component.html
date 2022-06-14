@@ -1,1 +1,60 @@
-<p>modal1 works!</p>
+<div class="report-wrapper card">
+    <div class="header">
+        <div class="option">
+
+              <!-- <div class="sort-date">
+                    <div class="item">
+                      <input type="date">
+                    </div>
+
+                    <div class="item">
+                        <p>-</p>
+                    </div>
+
+                    <div class="item">
+                      <input type="date">
+                    </div>
+              </div> -->
+
+              <div class="search">
+                  <input type="search" [(ngModel)]="kw" (keyup.enter)="searchFunc()">
+                  <button (click)="searchFunc()">ຄົນຫາ</button>
+              </div>
+
+              <div class="close">
+                <span class="material-icons" (click)="coloseFunc()">
+                  close
+                </span>
+              </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="table-wrapper">
+          <table>
+            <tr>
+              <th>ລະຫັດ</th>
+              <th>ຊື່ອຸປະກອນ</th>
+              <th>ຕໍາແໜ່ງອຸປະກອນ</th>
+              <th>ປະເພດອຸປະກອນ</th>
+              <th>ຫົວໜ່ວຍອຸປະກອນ</th>
+              <th>ຈໍານວນ</th>
+            </tr>
+            <tr *ngFor="let item of equList">
+              <td>{{item.id}}</td>
+              <td>{{item.equip_name}}</td>
+              <td>{{item.pos_name}}</td>
+              <td>{{item.cate_name}}</td>
+              <td>{{item.unit_name}}</td>
+              <td>{{item.equip_stock}}</td>
+            </tr>
+
+
+          </table>
+
+          <div class="btn-print">
+              <button onclick="window.print()">ພີນ</button>
+          </div>
+        </div>
+    </div>
+</div>

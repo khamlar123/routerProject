@@ -1,1 +1,38 @@
-<p>modal3 works!</p>
+<div class="report-wrapper card">
+  <div class="header">
+      <div class="option">
+
+            <div class="search">
+                <input type="search" [(ngModel)]="kw" (keyup.enter)="searchFunc()">
+                <button (click)="searchFunc()">ຄົນຫາ</button>
+            </div>
+
+            <div class="close">
+              <span class="material-icons" (click)="coloseFunc()">
+                close
+              </span>
+            </div>
+      </div>
+  </div>
+
+  <div class="content">
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th style="width: 50px;">ລະຫັດ</th>
+            <th>ຊື່ປະເພດອຸປະກອນ</th>
+          </tr>
+          <tr *ngFor="let item of unitList">
+            <td>{{item.id}}</td>
+            <td>{{item.unit_name}}</td>
+          </tr>
+
+
+        </table>
+
+        <div class="btn-print">
+            <button onclick="window.print()">ພີນ</button>
+        </div>
+      </div>
+  </div>
+</div>

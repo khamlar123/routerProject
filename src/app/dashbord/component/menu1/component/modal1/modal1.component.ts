@@ -82,7 +82,7 @@ export class Modal1Component implements OnInit,OnDestroy {
       }
 
       this.subs.sink = this.api.updateEqu(model).subscribe(res => {
-        if(res == 'update equipments done !'){
+        if(res == "update equipments done !"){
           this.loadEqu();
           const reset = {
             id: 0,

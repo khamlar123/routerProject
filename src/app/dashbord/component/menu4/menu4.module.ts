@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -25,7 +26,8 @@ import { Modal7Component } from './component/modal7/modal7.component';
   ],
   imports: [
     CommonModule,
-    Menu4RoutingModule
+    Menu4RoutingModule,
+    FormsModule
   ]
 })
 export class Menu4Module { }

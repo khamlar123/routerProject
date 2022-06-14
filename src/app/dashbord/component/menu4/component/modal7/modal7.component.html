@@ -1,1 +1,57 @@
-<p>modal7 works!</p>
+<div class="report-wrapper card">
+  <div class="header">
+      <div class="option">
+
+            <div class="sort-date">
+                  <div class="item">
+                    <input type="date" [(ngModel)]="startDate">
+                  </div>
+
+                  <div class="item">
+                      <p>-</p>
+                  </div>
+
+                  <div class="item">
+                    <input type="date" [(ngModel)]="endDate">
+                  </div>
+            </div>
+
+            <div class="search">
+                <!-- <input type="search" [(ngModel)]="kw" (keyup.enter)="searchFunc()"> -->
+                <button (click)="sortDate()">ຄົນຫາ</button>
+            </div>
+
+            <div class="close">
+              <span class="material-icons" (click)="coloseFunc()">
+                close
+              </span>
+            </div>
+      </div>
+  </div>
+
+  <div class="content">
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th style="width: 50px;">ລະຫັດ</th>
+            <th>ພະນັກງານ</th>
+            <th>ອຸປະກອນ</th>
+            <th>ວັນທີເບີກ</th>
+            <th>ຈໍານວນ</th>
+
+          </tr>
+          <tr *ngFor="let item of outList">
+            <td>{{item.id}}</td>
+            <td>{{getStaffName(item.staff_id)}}</td>
+            <td>{{getEquName(item.equip_id)}}</td>
+            <td>{{item.out_date}}</td>
+            <td>{{item.out_qty}}</td>
+          </tr>
+        </table>
+
+        <div class="btn-print">
+            <button onclick="window.print()">ພີນ</button>
+        </div>
+      </div>
+  </div>
+</div>
