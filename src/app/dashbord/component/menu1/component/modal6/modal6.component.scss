@@ -9,8 +9,8 @@
 
 .modal-container{
   .content{
-    width: 90vw;
-    height: 90vh;
+    width: 70vw;
+    height: 80vh;
     .close{
       display: flex;
       width: 100%;
@@ -25,11 +25,11 @@
     .input-item{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
       .item{
         display: flex;
         flex-direction: column;
-        width: 300px;
+        width: 200px;
 
         label{
           color: #666666;

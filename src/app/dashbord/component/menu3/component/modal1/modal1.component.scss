@@ -9,8 +9,8 @@
 
 .modal-container{
   .content{
-    width: 90vw;
-    height: 90vh;
+    width: 70vw;
+    height: 70vh;
     .close{
       display: flex;
       width: 100%;
@@ -29,7 +29,7 @@
       .item{
         display: flex;
         flex-direction: column;
-        width: 300px;
+        width: 200px;
 
         label{
           color: #666666;

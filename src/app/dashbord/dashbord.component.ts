@@ -14,19 +14,19 @@ export class DashbordComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('token') === null ){
-        this.router.navigate(['/login'])
+        this.router.navigate(['/login.php'])
     }
   }
 
   changeActiveMenu(id:number):void{
       this.menuActive = id;
-      this.router.navigate([`/menu${id}`])
+      this.router.navigate([`/menu${id}.php`])
   }
 
 
   logoutFunc():void{
     localStorage.clear();
-    this.router.navigate(['/login'])
+    this.router.navigate(['/login.php'])
   }
 
 }

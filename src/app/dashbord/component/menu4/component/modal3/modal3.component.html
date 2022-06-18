@@ -1,11 +1,24 @@
 <div class="report-wrapper card">
   <div class="header">
       <div class="option">
+        <div class="sort-date">
+          <div class="item">
+            <input type="date" [(ngModel)]="startDate">
+          </div>
 
-            <div class="search">
-                <input type="search" [(ngModel)]="kw" (keyup.enter)="searchFunc()">
-                <button (click)="searchFunc()">ຄົນຫາ</button>
-            </div>
+          <div class="item">
+              <p>-</p>
+          </div>
+
+          <div class="item">
+            <input type="date" [(ngModel)]="endDate">
+          </div>
+    </div>
+
+    <div class="search">
+        <!-- <input type="search" [(ngModel)]="kw" (keyup.enter)="searchFunc()"> -->
+        <button (click)="sortDate()">ຄົນຫາ</button>
+    </div>
 
             <div class="close">
               <span class="material-icons" (click)="coloseFunc()">
@@ -20,19 +33,26 @@
         <table>
           <tr>
             <th style="width: 50px;">ລະຫັດ</th>
-            <th>ຊື່ປະເພດອຸປະກອນ</th>
+            <th>ອຸປະກອນ</th>
+            <th>ວັນທີສັ່ງຊື້</th>
+            <th>ຈໍານວນ</th>
+
           </tr>
           <tr *ngFor="let item of unitList">
             <td>{{item.id}}</td>
-            <td>{{item.unit_name}}</td>
+            <td>{{getEquname(item.equip_id) }}</td>
+            <td>{{item.pur_date | date: "shortDate"}}</td>
+            <td>{{item.equip_qty}}</td>
           </tr>
 
 
         </table>
 
         <div class="btn-print">
-            <button onclick="window.print()">ພີນ</button>
+          <button (click)="opwnModal = true">ລາຍງານ</button>
         </div>
       </div>
   </div>
 </div>
+
+<app-bill3 [invoiceList]="unitList" [equList]="equList" *ngIf="opwnModal" (close)="opwnModal = false"></app-bill3>

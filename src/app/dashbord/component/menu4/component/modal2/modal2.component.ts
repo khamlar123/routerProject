@@ -13,6 +13,7 @@ export class Modal2Component implements OnInit {
   masterCate: any[] = [];
   cateList: any[] = [];
   kw = '';
+  opwnModal = false;
   constructor(  private api: DashboardService) { }
 
   ngOnInit(): void {
@@ -40,5 +41,7 @@ export class Modal2Component implements OnInit {
       this.cateList = this.masterCate;
     }
 }
+
+
 
 }

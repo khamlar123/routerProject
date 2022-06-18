@@ -31,8 +31,10 @@
         </table>
 
         <div class="btn-print">
-            <button onclick="window.print()">ພີນ</button>
+          <button (click)="opwnModal = true">ລາຍງານ</button>
         </div>
       </div>
   </div>
 </div>
+
+<app-bill2 [invoiceList]="cateList" *ngIf="opwnModal" (close)="opwnModal = false"></app-bill2>

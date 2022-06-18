@@ -1,0 +1,72 @@
+<div class="modal-container">
+  <button onclick="window.print()" class="print" >Print</button>
+  <button (click)="close.emit()" class="close" >Close</button>
+  <div class="content card printarea" [ngClass]="{'nomal': true}">
+    <div class="header">
+      <div class="title">
+        <label>ບໍລິສັດ ລາວໂທລະຄົມ ມະຫາຊົນ</label>
+        <label>ພະແນກ/ນະຄອນຫຼວງ/ລລທສາຂາແຂວງ.................</label>
+        <label>ພາກສ່ວນ/ສູນ.................</label>
+      </div>
+
+      <div class="title">
+
+        <label>ເລກທີ:............</label>
+        <label>ນະຄອນຫຼວງວຽງຈັນວັນທີ: {{getDate | date: "shortDate"}}</label>
+      </div>
+    </div>
+    <div class="lable-title">
+      <h1>ລາຍງານອຸປະກອນ</h1>
+      <p>ເບີກໃຫ້ ພະແນກ/ນະຄອນຫຼວງ/ແຂວງ........................... ສູນ/ພາກສ່ວນ......................</p>
+      <p>ຕາມໃບສະເໜີ ................................................................................ລົງວັນທີ່: {{getDate | date: "shortDate"}} </p>
+    </div>
+
+    <div class="product-type">
+      <div class="item">
+        <input type="checkbox" name="" id="">
+        <label for="">ປະເພດສີນຄ້າ</label>
+      </div>
+      <div class="item">
+        <input type="checkbox" name="" id="">
+        <label for="">ປະເພດສີນຄ້າ</label>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" name="" id="">
+        <label for="">ປະເພດສີນຄ້າ</label>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" name="" id="">
+        <label for="">ປະເພດສີນຄ້າ</label>
+      </div>
+    </div>
+
+      <div class="table">
+        <table>
+          <tr>
+            <th style="width: 50px;">ລະຫັດ</th>
+            <th>ອຸປະກອນ</th>
+            <th>ວັນທີສັ່ງຊື້</th>
+            <th>ຈໍານວນ</th>
+
+          </tr>
+          <tr *ngFor="let item of invoiceList">
+            <td>{{item.id}}</td>
+            <td>{{getEquname(item.equip_id) }}</td>
+            <td>{{item.pur_date | date: "shortDate"}}</td>
+            <td>{{item.equip_qty}}</td>
+          </tr>
+        </table>
+      </div>
+
+
+
+      <div class="laiy-sen">
+        <label for="">ຜູ້ອານຸມັດ</label>
+          <label for="">ຜູ້ລາຍງານ</label>
+
+      </div>
+
+  </div>
+</div>

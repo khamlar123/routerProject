@@ -12,7 +12,7 @@ export class Menu1Component implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('token') === null ){
-      this.router.navigate(['/login'])
+      this.router.navigate(['/login.php'])
   }
   }
 

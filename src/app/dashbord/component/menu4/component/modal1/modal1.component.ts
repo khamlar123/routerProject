@@ -13,6 +13,9 @@ export class Modal1Component implements OnInit {
   masterEqu:any[] =[];
   equList: any[] = [];
   kw = '';
+
+  opwnModal = false;
+
   constructor( private api: DashboardService) { }
 
   ngOnInit(): void {
