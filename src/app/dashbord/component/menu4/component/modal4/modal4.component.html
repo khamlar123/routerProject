@@ -1,7 +1,6 @@
 <div class="report-wrapper card">
   <div class="header">
       <div class="option">
-
             <div class="sort-date">
                   <div class="item">
                     <input type="date" [(ngModel)]="startDate">
@@ -31,6 +30,7 @@
 
   <div class="content">
       <div class="table-wrapper">
+
         <table>
           <tr>
             <th style="width: 50px;">ລະຫັດ</th>
@@ -52,8 +52,10 @@
         </table>
 
         <div class="btn-print">
-            <button onclick="window.print()">print</button>
+          <button (click)="opwnModal = true">ລາຍງານ</button>
         </div>
       </div>
   </div>
 </div>
+
+<app-bill4 [invoiceList]="impList" [purList]="purList" [equList]="equList" [userList]="userList" *ngIf="opwnModal" (close)="opwnModal = false"></app-bill4>

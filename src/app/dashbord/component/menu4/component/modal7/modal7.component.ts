@@ -18,7 +18,7 @@ export class Modal7Component implements OnInit {
 
   startDate = new Date();
   endDate = new Date();
-
+  opwnModal = false;
   constructor( private api: DashboardService) { }
 
   ngOnInit(): void {

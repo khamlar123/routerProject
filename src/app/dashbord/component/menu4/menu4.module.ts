@@ -14,6 +14,10 @@ import { Modal7Component } from './component/modal7/modal7.component';
 import { BillComponent } from './component/modal1/bill/bill.component';
 import { Bill2Component } from './component/modal2/bill2/bill2.component';
 import { Bill3Component } from './component/modal3/bill3/bill3.component';
+import { Bill4Component } from './component/modal4/bill4/bill4.component';
+import { Bill5Component } from './component/modal5/bill5/bill5.component';
+import { Bill6Component } from './component/modal6/bill6/bill6.component';
+import { Bill7Component } from './component/modal7/bill7/bill7.component';
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { Bill3Component } from './component/modal3/bill3/bill3.component';
     Modal7Component,
     BillComponent,
     Bill2Component,
-    Bill3Component
+    Bill3Component,
+    Bill4Component,
+    Bill5Component,
+    Bill6Component,
+    Bill7Component
   ],
   imports: [
     CommonModule,

@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="lable-title">
-      <h1>ລາຍງານໃບສັ່ງຊື່ອຸປະກອນ</h1>
+      <h1>ລາຍງານຮັບອຸປະກອນ</h1>
       <p>ເບີກໃຫ້ ພະແນກ/ນະຄອນຫຼວງ/ແຂວງ........................... ສູນ/ພາກສ່ວນ......................</p>
       <p>ຕາມໃບສະເໜີ ................................................................................ລົງວັນທີ່: {{getDate | date: "shortDate"}} </p>
     </div>
@@ -46,15 +46,18 @@
         <table>
           <tr>
             <th style="width: 50px;">ລະຫັດ</th>
+            <th>ລະຫັດການສັ່ງຊື້</th>
             <th>ອຸປະກອນ</th>
-            <th>ວັນທີສັ່ງຊື້</th>
+            <th>ຜູ້ໃຊ້ລະບົບ</th>
+            <th>ວັນທີນໍາເຂົ້າ</th>
             <th>ຈໍານວນ</th>
-
           </tr>
           <tr *ngFor="let item of invoiceList">
             <td>{{item.id}}</td>
-            <td>{{getEquname(item.equip_id) }}</td>
-            <td>{{item.pur_date | date: "shortDate"}}</td>
+            <td>{{item.pur_id}}</td>
+            <td>{{getEquName(item.equip_id)}}</td>
+            <td>{{getUserName(item.user_id)}}</td>
+            <td>{{item.import_date | date: "shortDate"}}</td>
             <td>{{item.equip_qty}}</td>
           </tr>
         </table>

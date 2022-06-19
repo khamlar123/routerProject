@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="lable-title">
-      <h1>ລາຍງານໃບສັ່ງຊື່ອຸປະກອນ</h1>
+      <h1>ລາຍງານຂໍ້ມູນພະນັກງານ</h1>
       <p>ເບີກໃຫ້ ພະແນກ/ນະຄອນຫຼວງ/ແຂວງ........................... ສູນ/ພາກສ່ວນ......................</p>
       <p>ຕາມໃບສະເໜີ ................................................................................ລົງວັນທີ່: {{getDate | date: "shortDate"}} </p>
     </div>
@@ -46,21 +46,29 @@
         <table>
           <tr>
             <th style="width: 50px;">ລະຫັດ</th>
-            <th>ອຸປະກອນ</th>
-            <th>ວັນທີສັ່ງຊື້</th>
-            <th>ຈໍານວນ</th>
+            <th>ຊື່ນາມສະກຸນ</th>
+            <th>ເພດ</th>
+            <th>ວັນເດືອນປີເກີດ</th>
+            <th>ບ້ານ</th>
+            <th>ເມືອງ</th>
+            <th>ແຂວງ</th>
+            <th>ເບີໂທ</th>
+            <th>ຂໍ້ມູນຕິດຕໍ່</th>
 
           </tr>
           <tr *ngFor="let item of invoiceList">
             <td>{{item.id}}</td>
-            <td>{{getEquname(item.equip_id) }}</td>
-            <td>{{item.pur_date | date: "shortDate"}}</td>
-            <td>{{item.equip_qty}}</td>
+            <td>{{item.fname +' '+ item.lname }}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.bod | date: "shortDate"}}</td>
+            <td>{{item.village}}</td>
+            <td>{{item.district}}</td>
+            <td>{{item.province}}</td>
+            <td>{{item.phone}}</td>
+            <td>{{item.contact_info}}</td>
           </tr>
         </table>
       </div>
-
-
 
       <div class="laiy-sen">
         <label for="">ຜູ້ອານຸມັດ</label>

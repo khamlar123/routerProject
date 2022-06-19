@@ -13,6 +13,7 @@ export class Modal6Component implements OnInit {
   masterStaffList: any[] =[];
   staffList: any[] =[];
   kw = '';
+  opwnModal = false;
   constructor(private api: DashboardService) { }
 
   ngOnInit(): void {

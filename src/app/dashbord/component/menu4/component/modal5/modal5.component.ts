@@ -13,6 +13,7 @@ export class Modal5Component implements OnInit {
   masterSupList: any[] =[];
   supList: any[] =[];
   kw = '';
+  opwnModal = false;
   constructor(private api: DashboardService) { }
 
   ngOnInit(): void {

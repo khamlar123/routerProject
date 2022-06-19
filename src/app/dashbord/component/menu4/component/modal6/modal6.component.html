@@ -21,7 +21,7 @@
           <tr>
             <th style="width: 50px;">ລະຫັດ</th>
             <th>ຊື່ນາມສະກຸນ</th>
-
+            <th>ວັນເດືອນປີເກີດ</th>
             <th>ເພດ</th>
             <th>ບ້ານ</th>
             <th>ເມືອງ</th>
@@ -40,15 +40,14 @@
             <td>{{item.province}}</td>
             <td>{{item.phone}}</td>
             <td>{{item.contact_info}}</td>
-
           </tr>
-
-
         </table>
 
         <div class="btn-print">
-            <button onclick="window.print()">print</button>
+          <button (click)="opwnModal = true">ລາຍງານ</button>
         </div>
       </div>
   </div>
 </div>
+
+<app-bill6 [invoiceList]="staffList" *ngIf="opwnModal" (close)="opwnModal = false"></app-bill6>

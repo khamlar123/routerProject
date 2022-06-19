@@ -1,0 +1,96 @@
+.content{
+
+  width: 100%;
+  min-height:90vh;
+  background: rgb(243, 243, 93);
+  .header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .title{
+      display: flex;
+      flex-direction: column;
+      &:nth-child(2){
+        text-align: end;
+      }
+    }
+  }
+
+  .lable-title{
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .product-type{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    .item{
+      input{
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .table{
+    min-height: calc(100vh - 360px);
+  }
+
+  table{
+    width: 100%;
+  }
+
+  table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: none !important;
+    font-size: 14px;
+  }
+  th{
+    text-align: center;
+  }
+  .laiy-sen{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    label{
+      padding-left: 50px;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.nomal{
+  width: 70vw;
+}
+
+.print{
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  outline: none;
+}
+
+.close{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  outline: none;
+}
+
+@media print {
+
+  .printarea {
+    width: 100vw;
+   }
+}
+

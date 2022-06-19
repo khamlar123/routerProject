@@ -17,7 +17,7 @@ export class Modal4Component implements OnInit {
   userList: any[] = [];
   equList: any[] = [];
   kw = '';
-
+  opwnModal = false;
   startDate = new Date();
   endDate = new Date();
 
