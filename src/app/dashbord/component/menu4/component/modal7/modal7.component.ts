@@ -30,6 +30,7 @@ export class Modal7Component implements OnInit {
   loadOut():void{
     this.subs.sink = this.api.getOut().subscribe(res => {
       this.outList = res;
+      this.masterOutList = res;
     })
   }
 
